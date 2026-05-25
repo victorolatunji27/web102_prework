@@ -24,7 +24,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<img src='file:///private/var/folders/lr/_rnvt0fs5691ffwrkj2wczmh0000gn/T/3650c475eb465e0214c9acf155dba09a/Kapture%202026-05-25%20at%2015.10.46.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='file:///Users/victorolatunji/Desktop/Kapture%202026-05-25%20at%2015.10.46.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
