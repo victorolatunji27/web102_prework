@@ -26,8 +26,11 @@ Here's a walkthrough of implemented features:
 
 <img src='file:///Users/victorolatunji/Desktop/Kapture%202026-05-25%20at%2015.10.46.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
+
+[![Watch the walkthrough](https://vumbnail.com/1195405394.jpg)](https://vimeo.com/1195405394)
+
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+Video created with Vimeo and Kap  
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
