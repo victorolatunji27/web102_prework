@@ -22,10 +22,14 @@ body {
 .stats-container {
     display: flex;
     padding: 20px;
-    align-items: center;
+    align-items: center; 
+    transition: box-shadow 0.2s ease; 
+}
+
+.stats-container:hover {
     cursor: pointer;
     box-shadow: 0 0 30px lightblue;
-    hover-effect: hover;
+
 }
 
 

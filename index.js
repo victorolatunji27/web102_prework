@@ -122,7 +122,7 @@ function showAllGames() {
     deleteChildElements(gamesContainer);
 
     // add all games from the JSON data to the DOM
-    deleteChildElements(gamesContainer);
+    
     addGamesToPage(GAMES_JSON);
 }
 
@@ -132,7 +132,7 @@ const fundedBtn = document.getElementById("funded-btn");
 const allBtn = document.getElementById("all-btn");
 
 // add event listeners with the correct functions to each button
-unfundedBtn.addEventListener("click". filterUnfundedOnly);
+unfundedBtn.addEventListener("click", filterUnfundedOnly);
 fundedBtn.addEventListener("click", filterFundedOnly);
 allBtn.addEventListener("click", showAllGames);
 
@@ -145,8 +145,10 @@ allBtn.addEventListener("click", showAllGames);
 const descriptionContainer = document.getElementById("description-container");
 
 // use filter or reduce to count the number of unfunded games
+const numUnfunded = GAMES_JSON.reduce((acc, game) => {
+    return game.pledged < game.goal ? acc + 1 : acc;
+}, 0);
 
-const numUnfunded = GAMES_JSON.filter(game => game.pledged < game.goal).length;
 // create a string that explains the number of unfunded games using the ternary operator
 const displayStr = `A total of $${totalRaised.toLocaleString('en-US')} has been raised for ${GAMES_JSON.length} games. Currently, ${numUnfunded === 1 ? "1 game remains" : `${numUnfunded} games remain`} unfunded. We need your help to fund these amazing games!`;
 
@@ -163,16 +165,18 @@ descriptionContainer.appendChild(descParagraph);
 const firstGameContainer = document.getElementById("first-game");
 const secondGameContainer = document.getElementById("second-game");
 
-const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
+const sortedGames = [...GAMES_JSON].sort((item1, item2) => {
     return item2.pledged - item1.pledged;
 });
 
 // use destructuring and the spread operator to grab the first and second games
 const [firstGame, secondGame, ...others] = sortedGames;
+
 // create a new element to hold the name of the top pledge game, then append it to the correct element
 const firstGameEl = document.createElement("p");
 firstGameEl.innerHTML = firstGame.name;
 firstGameContainer.appendChild(firstGameEl);
+
 // do the same for the runner up item
 const secondGameEl = document.createElement("p");
 secondGameEl.innerHTML = secondGame.name;
